@@ -15,7 +15,7 @@ const CUSTOMER_WIDGET_URL = 'https://efcx-qa9.expertflow.com/customer-widget/#/w
 async function loginAgent(page: any, agentInfo: { agentID: string; password: string }) {
   await page.goto(unifiedAgent);
   await page.locator('#username').fill(agentInfo.agentID); //credentials.username
-  await page.locator('#password').fill(agentInfo.password); //credentials.password
+  await page.locator('#password').fill(agentInfo.password); //credentials.password==
   await page.getByRole('button', { name: 'Login' }).click();
   await expect(page.getByAltText('ExpertFlow')).toBeVisible();
      await page.waitForTimeout(3000);
