@@ -6,6 +6,7 @@ test('Create and publish campaign', async ({setup, page}) => {
   await campaignPage.createCampaign();
   
   await campaignPage.verifyCampaignCreated();
+  console.log('Campaign created and published successfully');
 
 });
 
